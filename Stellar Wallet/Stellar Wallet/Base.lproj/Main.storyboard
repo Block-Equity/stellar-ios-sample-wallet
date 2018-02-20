@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,69 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stellar_Wallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oG9-Q2-wOa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCm-FJ-V5u">
+                                        <rect key="frame" x="40" y="303.5" width="295" height="60"/>
+                                        <color key="backgroundColor" red="0.31957346200942993" green="0.69989806413650513" blue="0.87845176458358765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="MUZ-CD-MLc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <state key="normal" title="Generate Stellar Address">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="generateAddress" destination="BYZ-38-t0r" eventType="touchUpInside" id="1xl-ce-U31"/>
+                                        </connections>
+                                    </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="A3n-2G-PTM">
+                                        <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="7o6-2b-FI5"/>
+                                            <constraint firstAttribute="height" constant="20" id="Fk7-cT-bMd"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="A3n-2G-PTM" firstAttribute="centerX" secondItem="oG9-Q2-wOa" secondAttribute="centerX" id="1ck-OK-4Dn"/>
+                                    <constraint firstItem="bCm-FJ-V5u" firstAttribute="centerX" secondItem="oG9-Q2-wOa" secondAttribute="centerX" id="ma7-xd-4Fz"/>
+                                    <constraint firstAttribute="trailing" secondItem="bCm-FJ-V5u" secondAttribute="trailing" constant="40" id="vTO-Ad-9PY"/>
+                                    <constraint firstItem="A3n-2G-PTM" firstAttribute="centerY" secondItem="oG9-Q2-wOa" secondAttribute="centerY" id="vfC-GC-TBi"/>
+                                    <constraint firstItem="bCm-FJ-V5u" firstAttribute="centerY" secondItem="oG9-Q2-wOa" secondAttribute="centerY" id="yIs-OF-dpo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oG9-Q2-wOa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6sI-vD-CHr"/>
+                            <constraint firstItem="oG9-Q2-wOa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7zI-T4-4tc"/>
+                            <constraint firstItem="oG9-Q2-wOa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AFH-5R-pgu"/>
+                            <constraint firstItem="oG9-Q2-wOa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="e9J-PW-EcA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="A3n-2G-PTM" id="Wy4-z8-KIp"/>
+                        <outlet property="generateAddressButton" destination="bCm-FJ-V5u" id="wRr-Y8-bGH"/>
+                        <outlet property="generateAddressView" destination="oG9-Q2-wOa" id="zcU-1N-j2t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="111.99400299850076"/>
         </scene>
     </scenes>
 </document>
