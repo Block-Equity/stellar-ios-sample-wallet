@@ -1,0 +1,728 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC211EBA203CA434002CDAB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC211EB9203CA434002CDAB8 /* AppDelegate.swift */; };
+		EC211EBC203CA434002CDAB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC211EBB203CA434002CDAB8 /* ViewController.swift */; };
+		EC211EBF203CA434002CDAB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC211EBD203CA434002CDAB8 /* Main.storyboard */; };
+		EC211EC1203CA434002CDAB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC211EC0203CA434002CDAB8 /* Assets.xcassets */; };
+		EC211EC4203CA434002CDAB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC211EC2203CA434002CDAB8 /* LaunchScreen.storyboard */; };
+		EC211ECF203CA434002CDAB8 /* Stellar_WalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC211ECE203CA434002CDAB8 /* Stellar_WalletTests.swift */; };
+		EC211EDA203CA434002CDAB8 /* Stellar_WalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC211ED9203CA434002CDAB8 /* Stellar_WalletUITests.swift */; };
+		ECC17077203CA5BF001B8109 /* stellarsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC17068203CA5A0001B8109 /* stellarsdk.framework */; };
+		ECC17078203CA5BF001B8109 /* stellarsdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ECC17068203CA5A0001B8109 /* stellarsdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC211ECB203CA434002CDAB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC211EAE203CA434002CDAB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC211EB5203CA434002CDAB8;
+			remoteInfo = "Stellar Wallet";
+		};
+		EC211ED6203CA434002CDAB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC211EAE203CA434002CDAB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC211EB5203CA434002CDAB8;
+			remoteInfo = "Stellar Wallet";
+		};
+		ECC17067203CA5A0001B8109 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC1705D203CA5A0001B8109 /* stellarsdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7445E9FC201B106500470E0A;
+			remoteInfo = stellarsdk;
+		};
+		ECC17069203CA5A0001B8109 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC1705D203CA5A0001B8109 /* stellarsdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7445EA05201B106500470E0A;
+			remoteInfo = stellarsdkTests;
+		};
+		ECC1706B203CA5A0001B8109 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC1705D203CA5A0001B8109 /* stellarsdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 743DF4E5201F130100713DE7;
+			remoteInfo = "stellarsdk-macOS";
+		};
+		ECC1706D203CA5A0001B8109 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC1705D203CA5A0001B8109 /* stellarsdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 743DF4ED201F130200713DE7;
+			remoteInfo = "stellarsdk-macOSTests";
+		};
+		ECC1706F203CA5A0001B8109 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC1705D203CA5A0001B8109 /* stellarsdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 743DF50A201F458400713DE7;
+			remoteInfo = "stellarsdkTests-Host";
+		};
+		ECC17071203CA5A0001B8109 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC1705D203CA5A0001B8109 /* stellarsdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 743DF51D201F458400713DE7;
+			remoteInfo = "stellarsdkTests-HostTests";
+		};
+		ECC17073203CA5A0001B8109 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC1705D203CA5A0001B8109 /* stellarsdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 743DF528201F458400713DE7;
+			remoteInfo = "stellarsdkTests-HostUITests";
+		};
+		ECC17075203CA5B5001B8109 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC1705D203CA5A0001B8109 /* stellarsdk.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7445E9FB201B106500470E0A;
+			remoteInfo = stellarsdk;
+		};
+		ECC17079203CA5BF001B8109 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC1705D203CA5A0001B8109 /* stellarsdk.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7445E9FB201B106500470E0A;
+			remoteInfo = stellarsdk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ECC1707B203CA5BF001B8109 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ECC17078203CA5BF001B8109 /* stellarsdk.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EC211EB6203CA434002CDAB8 /* Stellar Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stellar Wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC211EB9203CA434002CDAB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC211EBB203CA434002CDAB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC211EBE203CA434002CDAB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC211EC0203CA434002CDAB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC211EC3203CA434002CDAB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC211EC5203CA434002CDAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC211ECA203CA434002CDAB8 /* Stellar WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stellar WalletTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC211ECE203CA434002CDAB8 /* Stellar_WalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stellar_WalletTests.swift; sourceTree = "<group>"; };
+		EC211ED0203CA434002CDAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC211ED5203CA434002CDAB8 /* Stellar WalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stellar WalletUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC211ED9203CA434002CDAB8 /* Stellar_WalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stellar_WalletUITests.swift; sourceTree = "<group>"; };
+		EC211EDB203CA434002CDAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECC1705D203CA5A0001B8109 /* stellarsdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = stellarsdk.xcodeproj; path = "../../stellar-ios-mac-sdk/stellarsdk/stellarsdk.xcodeproj"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC211EB3203CA434002CDAB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC17077203CA5BF001B8109 /* stellarsdk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC211EC7203CA434002CDAB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC211ED2203CA434002CDAB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC211EAD203CA434002CDAB8 = {
+			isa = PBXGroup;
+			children = (
+				EC211EB8203CA434002CDAB8 /* Stellar Wallet */,
+				EC211ECD203CA434002CDAB8 /* Stellar WalletTests */,
+				EC211ED8203CA434002CDAB8 /* Stellar WalletUITests */,
+				EC211EB7203CA434002CDAB8 /* Products */,
+				ECC1705D203CA5A0001B8109 /* stellarsdk.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		EC211EB7203CA434002CDAB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC211EB6203CA434002CDAB8 /* Stellar Wallet.app */,
+				EC211ECA203CA434002CDAB8 /* Stellar WalletTests.xctest */,
+				EC211ED5203CA434002CDAB8 /* Stellar WalletUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC211EB8203CA434002CDAB8 /* Stellar Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				EC211EB9203CA434002CDAB8 /* AppDelegate.swift */,
+				EC211EBB203CA434002CDAB8 /* ViewController.swift */,
+				EC211EBD203CA434002CDAB8 /* Main.storyboard */,
+				EC211EC0203CA434002CDAB8 /* Assets.xcassets */,
+				EC211EC2203CA434002CDAB8 /* LaunchScreen.storyboard */,
+				EC211EC5203CA434002CDAB8 /* Info.plist */,
+			);
+			path = "Stellar Wallet";
+			sourceTree = "<group>";
+		};
+		EC211ECD203CA434002CDAB8 /* Stellar WalletTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC211ECE203CA434002CDAB8 /* Stellar_WalletTests.swift */,
+				EC211ED0203CA434002CDAB8 /* Info.plist */,
+			);
+			path = "Stellar WalletTests";
+			sourceTree = "<group>";
+		};
+		EC211ED8203CA434002CDAB8 /* Stellar WalletUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC211ED9203CA434002CDAB8 /* Stellar_WalletUITests.swift */,
+				EC211EDB203CA434002CDAB8 /* Info.plist */,
+			);
+			path = "Stellar WalletUITests";
+			sourceTree = "<group>";
+		};
+		ECC1705E203CA5A0001B8109 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECC17068203CA5A0001B8109 /* stellarsdk.framework */,
+				ECC1706A203CA5A0001B8109 /* stellarsdkTests.xctest */,
+				ECC1706C203CA5A0001B8109 /* stellarsdk_macOS.framework */,
+				ECC1706E203CA5A0001B8109 /* stellarsdk-macOSTests.xctest */,
+				ECC17070203CA5A0001B8109 /* stellarsdkTests-Host.app */,
+				ECC17072203CA5A0001B8109 /* stellarsdkTests-HostTests.xctest */,
+				ECC17074203CA5A0001B8109 /* stellarsdkTests-HostUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC211EB5203CA434002CDAB8 /* Stellar Wallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC211EDE203CA434002CDAB8 /* Build configuration list for PBXNativeTarget "Stellar Wallet" */;
+			buildPhases = (
+				EC211EB2203CA434002CDAB8 /* Sources */,
+				EC211EB3203CA434002CDAB8 /* Frameworks */,
+				EC211EB4203CA434002CDAB8 /* Resources */,
+				ECC1707B203CA5BF001B8109 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECC17076203CA5B5001B8109 /* PBXTargetDependency */,
+				ECC1707A203CA5BF001B8109 /* PBXTargetDependency */,
+			);
+			name = "Stellar Wallet";
+			productName = "Stellar Wallet";
+			productReference = EC211EB6203CA434002CDAB8 /* Stellar Wallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC211EC9203CA434002CDAB8 /* Stellar WalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC211EE1203CA434002CDAB8 /* Build configuration list for PBXNativeTarget "Stellar WalletTests" */;
+			buildPhases = (
+				EC211EC6203CA434002CDAB8 /* Sources */,
+				EC211EC7203CA434002CDAB8 /* Frameworks */,
+				EC211EC8203CA434002CDAB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC211ECC203CA434002CDAB8 /* PBXTargetDependency */,
+			);
+			name = "Stellar WalletTests";
+			productName = "Stellar WalletTests";
+			productReference = EC211ECA203CA434002CDAB8 /* Stellar WalletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EC211ED4203CA434002CDAB8 /* Stellar WalletUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC211EE4203CA434002CDAB8 /* Build configuration list for PBXNativeTarget "Stellar WalletUITests" */;
+			buildPhases = (
+				EC211ED1203CA434002CDAB8 /* Sources */,
+				EC211ED2203CA434002CDAB8 /* Frameworks */,
+				EC211ED3203CA434002CDAB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC211ED7203CA434002CDAB8 /* PBXTargetDependency */,
+			);
+			name = "Stellar WalletUITests";
+			productName = "Stellar WalletUITests";
+			productReference = EC211ED5203CA434002CDAB8 /* Stellar WalletUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC211EAE203CA434002CDAB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Satraj Bambra";
+				TargetAttributes = {
+					EC211EB5203CA434002CDAB8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					EC211EC9203CA434002CDAB8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EC211EB5203CA434002CDAB8;
+					};
+					EC211ED4203CA434002CDAB8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EC211EB5203CA434002CDAB8;
+					};
+				};
+			};
+			buildConfigurationList = EC211EB1203CA434002CDAB8 /* Build configuration list for PBXProject "Stellar Wallet" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC211EAD203CA434002CDAB8;
+			productRefGroup = EC211EB7203CA434002CDAB8 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = ECC1705E203CA5A0001B8109 /* Products */;
+					ProjectRef = ECC1705D203CA5A0001B8109 /* stellarsdk.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				EC211EB5203CA434002CDAB8 /* Stellar Wallet */,
+				EC211EC9203CA434002CDAB8 /* Stellar WalletTests */,
+				EC211ED4203CA434002CDAB8 /* Stellar WalletUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		ECC17068203CA5A0001B8109 /* stellarsdk.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = stellarsdk.framework;
+			remoteRef = ECC17067203CA5A0001B8109 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ECC1706A203CA5A0001B8109 /* stellarsdkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = stellarsdkTests.xctest;
+			remoteRef = ECC17069203CA5A0001B8109 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ECC1706C203CA5A0001B8109 /* stellarsdk_macOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = stellarsdk_macOS.framework;
+			remoteRef = ECC1706B203CA5A0001B8109 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ECC1706E203CA5A0001B8109 /* stellarsdk-macOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "stellarsdk-macOSTests.xctest";
+			remoteRef = ECC1706D203CA5A0001B8109 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ECC17070203CA5A0001B8109 /* stellarsdkTests-Host.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "stellarsdkTests-Host.app";
+			remoteRef = ECC1706F203CA5A0001B8109 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ECC17072203CA5A0001B8109 /* stellarsdkTests-HostTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "stellarsdkTests-HostTests.xctest";
+			remoteRef = ECC17071203CA5A0001B8109 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ECC17074203CA5A0001B8109 /* stellarsdkTests-HostUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "stellarsdkTests-HostUITests.xctest";
+			remoteRef = ECC17073203CA5A0001B8109 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC211EB4203CA434002CDAB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC211EC4203CA434002CDAB8 /* LaunchScreen.storyboard in Resources */,
+				EC211EC1203CA434002CDAB8 /* Assets.xcassets in Resources */,
+				EC211EBF203CA434002CDAB8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC211EC8203CA434002CDAB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC211ED3203CA434002CDAB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC211EB2203CA434002CDAB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC211EBC203CA434002CDAB8 /* ViewController.swift in Sources */,
+				EC211EBA203CA434002CDAB8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC211EC6203CA434002CDAB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC211ECF203CA434002CDAB8 /* Stellar_WalletTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC211ED1203CA434002CDAB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC211EDA203CA434002CDAB8 /* Stellar_WalletUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC211ECC203CA434002CDAB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC211EB5203CA434002CDAB8 /* Stellar Wallet */;
+			targetProxy = EC211ECB203CA434002CDAB8 /* PBXContainerItemProxy */;
+		};
+		EC211ED7203CA434002CDAB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC211EB5203CA434002CDAB8 /* Stellar Wallet */;
+			targetProxy = EC211ED6203CA434002CDAB8 /* PBXContainerItemProxy */;
+		};
+		ECC17076203CA5B5001B8109 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = stellarsdk;
+			targetProxy = ECC17075203CA5B5001B8109 /* PBXContainerItemProxy */;
+		};
+		ECC1707A203CA5BF001B8109 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = stellarsdk;
+			targetProxy = ECC17079203CA5BF001B8109 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC211EBD203CA434002CDAB8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC211EBE203CA434002CDAB8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC211EC2203CA434002CDAB8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC211EC3203CA434002CDAB8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC211EDC203CA434002CDAB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC211EDD203CA434002CDAB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC211EDF203CA434002CDAB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6D5J8N66DU;
+				INFOPLIST_FILE = "Stellar Wallet/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blockeq.Stellar-Wallet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC211EE0203CA434002CDAB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6D5J8N66DU;
+				INFOPLIST_FILE = "Stellar Wallet/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blockeq.Stellar-Wallet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC211EE2203CA434002CDAB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Stellar WalletTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blockeq.Stellar-WalletTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stellar Wallet.app/Stellar Wallet";
+			};
+			name = Debug;
+		};
+		EC211EE3203CA434002CDAB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Stellar WalletTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blockeq.Stellar-WalletTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stellar Wallet.app/Stellar Wallet";
+			};
+			name = Release;
+		};
+		EC211EE5203CA434002CDAB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Stellar WalletUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blockeq.Stellar-WalletUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Stellar Wallet";
+			};
+			name = Debug;
+		};
+		EC211EE6203CA434002CDAB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Stellar WalletUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blockeq.Stellar-WalletUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Stellar Wallet";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC211EB1203CA434002CDAB8 /* Build configuration list for PBXProject "Stellar Wallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC211EDC203CA434002CDAB8 /* Debug */,
+				EC211EDD203CA434002CDAB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC211EDE203CA434002CDAB8 /* Build configuration list for PBXNativeTarget "Stellar Wallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC211EDF203CA434002CDAB8 /* Debug */,
+				EC211EE0203CA434002CDAB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC211EE1203CA434002CDAB8 /* Build configuration list for PBXNativeTarget "Stellar WalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC211EE2203CA434002CDAB8 /* Debug */,
+				EC211EE3203CA434002CDAB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC211EE4203CA434002CDAB8 /* Build configuration list for PBXNativeTarget "Stellar WalletUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC211EE5203CA434002CDAB8 /* Debug */,
+				EC211EE6203CA434002CDAB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC211EAE203CA434002CDAB8 /* Project object */;
+}
