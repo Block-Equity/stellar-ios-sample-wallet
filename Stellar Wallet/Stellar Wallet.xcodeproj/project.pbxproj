@@ -14,6 +14,7 @@
 		EC211EC4203CA434002CDAB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC211EC2203CA434002CDAB8 /* LaunchScreen.storyboard */; };
 		EC211ECF203CA434002CDAB8 /* Stellar_WalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC211ECE203CA434002CDAB8 /* Stellar_WalletTests.swift */; };
 		EC211EDA203CA434002CDAB8 /* Stellar_WalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC211ED9203CA434002CDAB8 /* Stellar_WalletUITests.swift */; };
+		EC3BC0B4203E0E03007134FA /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3BC0B3203E0E03007134FA /* ScanViewController.swift */; };
 		ECC17077203CA5BF001B8109 /* stellarsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC17068203CA5A0001B8109 /* stellarsdk.framework */; };
 		ECC17078203CA5BF001B8109 /* stellarsdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ECC17068203CA5A0001B8109 /* stellarsdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ECC17086203D0B56001B8109 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC17085203D0B56001B8109 /* PaymentViewController.swift */; };
@@ -127,6 +128,7 @@
 		EC211ED5203CA434002CDAB8 /* Stellar WalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stellar WalletUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC211ED9203CA434002CDAB8 /* Stellar_WalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stellar_WalletUITests.swift; sourceTree = "<group>"; };
 		EC211EDB203CA434002CDAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC3BC0B3203E0E03007134FA /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		ECC1705D203CA5A0001B8109 /* stellarsdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = stellarsdk.xcodeproj; path = "../../stellar-ios-mac-sdk/stellarsdk/stellarsdk.xcodeproj"; sourceTree = "<group>"; };
 		ECC17085203D0B56001B8109 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,6 +186,7 @@
 				EC211EB9203CA434002CDAB8 /* AppDelegate.swift */,
 				EC211EBB203CA434002CDAB8 /* BalanceViewController.swift */,
 				ECC17085203D0B56001B8109 /* PaymentViewController.swift */,
+				EC3BC0B3203E0E03007134FA /* ScanViewController.swift */,
 				EC211EBD203CA434002CDAB8 /* Main.storyboard */,
 				EC211EC0203CA434002CDAB8 /* Assets.xcassets */,
 				EC211EC2203CA434002CDAB8 /* LaunchScreen.storyboard */,
@@ -422,6 +425,7 @@
 				EC211EBC203CA434002CDAB8 /* BalanceViewController.swift in Sources */,
 				ECC17086203D0B56001B8109 /* PaymentViewController.swift in Sources */,
 				EC211EBA203CA434002CDAB8 /* AppDelegate.swift in Sources */,
+				EC3BC0B4203E0E03007134FA /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
