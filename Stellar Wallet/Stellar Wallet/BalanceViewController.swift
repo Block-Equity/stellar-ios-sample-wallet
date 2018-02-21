@@ -86,7 +86,7 @@ extension BalanceViewController {
     func generateWalletAddress() {
         let keyPair = try! KeyPair.generateRandomKeyPair()
         
-        sdk.accounts.createTestAccount(key: keyPair.accountId) { (response) -> (Void) in
+        sdk.accounts.createTestAccount(accountId: keyPair.accountId) { (response) -> (Void) in
             switch response {
             case .success(let data):
                 print("Details: \(data)")
@@ -109,11 +109,25 @@ extension BalanceViewController {
                 DispatchQueue.main.async {
                     let stellarAccountId = accountDetails.accountId
                     self.displayGeneratedAddress(with: accountDetails.balances[0].balance, stellarAccountId: stellarAccountId)
+                    self.streamBalance(accountId: stellarAccountId)
                 }
                 
             case .failure(let error):
                 print("Error: \(error)")
                 self.enableAddressButton()
+            }
+        }
+    }
+    
+    func streamBalance(accountId: String) {
+        sdk.payments.stream(for: .paymentsForAccount(account: accountId, cursor: nil)).onReceive { (response) -> (Void) in
+            switch response {
+            case .open:
+                break
+            case .response( _, let paymentResponse):
+                print(paymentResponse.sourceAccount)
+            case .error( _):
+                break
             }
         }
     }
