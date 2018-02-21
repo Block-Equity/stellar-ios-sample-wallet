@@ -9,6 +9,7 @@
 import CoreImage
 import stellarsdk
 import UIKit
+import UserNotifications
 
 class BalanceViewController: UIViewController {
     
@@ -20,6 +21,7 @@ class BalanceViewController: UIViewController {
     @IBOutlet var generateAddressView: UIView!
     
     let sdk = StellarSDK()
+    var isNotificationAccessGranted: Bool = false
     
     @IBAction func generateAddress() {
         disableAddressButton()
@@ -35,6 +37,17 @@ class BalanceViewController: UIViewController {
         super.viewDidLoad()
         
         checkForPrexistingWallet()
+        checkForPushPermissions()
+    }
+    
+    func checkForPushPermissions() {
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(
+            options: [.alert,.sound,.badge],
+            completionHandler: { (granted,error) in
+                self.isNotificationAccessGranted = granted
+            }
+        )
     }
     
     func checkForPrexistingWallet() {
@@ -80,7 +93,7 @@ class BalanceViewController: UIViewController {
 }
 
 /**
- * Stellar SDK functions 
+ * Stellar SDK functions.
  */
 extension BalanceViewController {
     func generateWalletAddress() {
@@ -125,11 +138,48 @@ extension BalanceViewController {
             case .open:
                 break
             case .response( _, let paymentResponse):
-                print(paymentResponse.sourceAccount)
+                print(paymentResponse.amount)
+                let body = "You have just received a payment of \(paymentResponse.amount) XLM from \(paymentResponse.sourceAccount)"
+                self.displayPushNotification(with: "Payment Received", body: body)
+                self.getAccountDetails(accountId: accountId)
             case .error( _):
                 break
             }
         }
+    }
+}
+
+/*
+ * Display the push notification.
+ */
+extension BalanceViewController {
+    func displayPushNotification(with title: String, body: String) {
+        if (isNotificationAccessGranted) {
+            let content = UNMutableNotificationContent()
+            content.title = title
+            content.body = body
+            
+            let trigger = UNTimeIntervalNotificationTrigger(
+                timeInterval: 1,
+                repeats: false)
+            
+            let request = UNNotificationRequest(
+                identifier: "payment.received",
+                content: content,
+                trigger: trigger
+            )
+            
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        }
+    }
+}
+
+/*
+ * Delegate required for push notification display when app is in foreground.
+ */
+extension BalanceViewController : UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .badge, .sound])
     }
 }
 
