@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC211EBA203CA434002CDAB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC211EB9203CA434002CDAB8 /* AppDelegate.swift */; };
-		EC211EBC203CA434002CDAB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC211EBB203CA434002CDAB8 /* ViewController.swift */; };
+		EC211EBC203CA434002CDAB8 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC211EBB203CA434002CDAB8 /* BalanceViewController.swift */; };
 		EC211EBF203CA434002CDAB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC211EBD203CA434002CDAB8 /* Main.storyboard */; };
 		EC211EC1203CA434002CDAB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC211EC0203CA434002CDAB8 /* Assets.xcassets */; };
 		EC211EC4203CA434002CDAB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC211EC2203CA434002CDAB8 /* LaunchScreen.storyboard */; };
@@ -16,6 +16,7 @@
 		EC211EDA203CA434002CDAB8 /* Stellar_WalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC211ED9203CA434002CDAB8 /* Stellar_WalletUITests.swift */; };
 		ECC17077203CA5BF001B8109 /* stellarsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC17068203CA5A0001B8109 /* stellarsdk.framework */; };
 		ECC17078203CA5BF001B8109 /* stellarsdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ECC17068203CA5A0001B8109 /* stellarsdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ECC17086203D0B56001B8109 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC17085203D0B56001B8109 /* PaymentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,7 +116,7 @@
 /* Begin PBXFileReference section */
 		EC211EB6203CA434002CDAB8 /* Stellar Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stellar Wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC211EB9203CA434002CDAB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC211EBB203CA434002CDAB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC211EBB203CA434002CDAB8 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
 		EC211EBE203CA434002CDAB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC211EC0203CA434002CDAB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC211EC3203CA434002CDAB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -127,6 +128,7 @@
 		EC211ED9203CA434002CDAB8 /* Stellar_WalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stellar_WalletUITests.swift; sourceTree = "<group>"; };
 		EC211EDB203CA434002CDAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECC1705D203CA5A0001B8109 /* stellarsdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = stellarsdk.xcodeproj; path = "../../stellar-ios-mac-sdk/stellarsdk/stellarsdk.xcodeproj"; sourceTree = "<group>"; };
+		ECC17085203D0B56001B8109 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				EC211EB9203CA434002CDAB8 /* AppDelegate.swift */,
-				EC211EBB203CA434002CDAB8 /* ViewController.swift */,
+				EC211EBB203CA434002CDAB8 /* BalanceViewController.swift */,
+				ECC17085203D0B56001B8109 /* PaymentViewController.swift */,
 				EC211EBD203CA434002CDAB8 /* Main.storyboard */,
 				EC211EC0203CA434002CDAB8 /* Assets.xcassets */,
 				EC211EC2203CA434002CDAB8 /* LaunchScreen.storyboard */,
@@ -416,7 +419,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC211EBC203CA434002CDAB8 /* ViewController.swift in Sources */,
+				EC211EBC203CA434002CDAB8 /* BalanceViewController.swift in Sources */,
+				ECC17086203D0B56001B8109 /* PaymentViewController.swift in Sources */,
 				EC211EBA203CA434002CDAB8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
