@@ -10,7 +10,7 @@ import CoreImage
 import stellarsdk
 import UIKit
 
-class ViewController: UIViewController {
+class BalanceViewController: UIViewController {
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var addressLabel: UILabel!
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
 /**
  * Stellar SDK functions 
  */
-extension ViewController {
+extension BalanceViewController {
     func generateWalletAddress() {
         let keyPair = try! KeyPair.generateRandomKeyPair()
         
