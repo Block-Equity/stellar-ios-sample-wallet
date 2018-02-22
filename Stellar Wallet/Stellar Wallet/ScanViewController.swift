@@ -9,6 +9,10 @@
 import AVFoundation
 import UIKit
 
+protocol ScanViewControllerDelegate: class {
+    func setQR(value: String)
+}
+
 class ScanViewController: UIViewController {
 
     @IBOutlet var closeButton: UIButton!
@@ -16,6 +20,8 @@ class ScanViewController: UIViewController {
     var captureSession = AVCaptureSession()
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var qrCodeFrameView: UIView?
+    
+    weak var delegate: ScanViewControllerDelegate?
     
     private let supportedCodeTypes = [AVMetadataObject.ObjectType.upce,
                                       AVMetadataObject.ObjectType.code39,
@@ -32,7 +38,10 @@ class ScanViewController: UIViewController {
                                       AVMetadataObject.ObjectType.qr]
     
     @IBAction func dismissView() {
-        dismiss(animated: true, completion: nil)
+        captureSession.stopRunning()
+        videoPreviewLayer?.removeFromSuperlayer()
+        
+        dismiss(animated: false, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -41,7 +50,7 @@ class ScanViewController: UIViewController {
         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: AVMediaType.video, position: .back)
         
         guard let captureDevice = deviceDiscoverySession.devices.first else {
-            print("Failed to get the camera device")
+            print("No Camera Found.")
             return
         }
         
@@ -79,7 +88,6 @@ class ScanViewController: UIViewController {
 }
 
 extension ScanViewController: AVCaptureMetadataOutputObjectsDelegate {
-    
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRect.zero
@@ -92,10 +100,11 @@ extension ScanViewController: AVCaptureMetadataOutputObjectsDelegate {
             let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
-            if metadataObj.stringValue != nil {
-                print(metadataObj.stringValue)
+            if let qrValue =  metadataObj.stringValue {
+                delegate?.setQR(value: qrValue)
+                
+                perform(#selector(self.dismissView), with: nil, afterDelay: 0.5)
             }
         }
     }
-    
 }

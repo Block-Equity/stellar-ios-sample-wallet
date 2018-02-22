@@ -29,7 +29,14 @@ class BalanceViewController: UIViewController {
         generateWalletAddress()
     }
     
-    @IBAction func displaySendCurrencyController() {
+    @IBAction func copyAddress() {
+        if let addressText = addressLabel.text, !addressText.isEmpty {
+            UIPasteboard.general.string = addressLabel.text
+            
+            let alert = UIAlertController(title: "Your Stellar wallet address has been successfully copied!", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
         
     }
     

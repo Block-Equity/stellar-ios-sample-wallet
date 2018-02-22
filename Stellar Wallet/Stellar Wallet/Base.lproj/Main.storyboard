@@ -59,13 +59,27 @@
                                         <color key="textColor" red="0.36539113519999999" green="0.41143113370000001" blue="0.44313892719999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICF-vZ-Eyv">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="60"/>
+                                        <connections>
+                                            <action selector="copyAddress" destination="BYZ-38-t0r" eventType="touchUpInside" id="wOM-Mo-crH"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ICF-vZ-Eyv" secondAttribute="trailing" id="0xZ-2d-DYC"/>
                                     <constraint firstAttribute="bottom" secondItem="sec-OP-w9x" secondAttribute="bottom" id="5XU-ta-qvk"/>
                                     <constraint firstAttribute="height" constant="60" id="772-zM-Fck"/>
                                     <constraint firstItem="sec-OP-w9x" firstAttribute="leading" secondItem="Pf5-pY-mQF" secondAttribute="leading" constant="15" id="RIm-ez-HY5"/>
                                     <constraint firstAttribute="trailing" secondItem="sec-OP-w9x" secondAttribute="trailing" constant="15" id="Rdo-4E-bcg"/>
+                                    <constraint firstItem="ICF-vZ-Eyv" firstAttribute="leading" secondItem="Pf5-pY-mQF" secondAttribute="leading" id="aMG-DO-9qh"/>
+                                    <constraint firstAttribute="trailing" secondItem="ICF-vZ-Eyv" secondAttribute="trailing" id="aPd-yF-KPO"/>
+                                    <constraint firstItem="ICF-vZ-Eyv" firstAttribute="leading" secondItem="Pf5-pY-mQF" secondAttribute="leading" id="bgc-wL-Vsd"/>
+                                    <constraint firstAttribute="bottom" secondItem="ICF-vZ-Eyv" secondAttribute="bottom" id="foC-uR-bwe"/>
+                                    <constraint firstAttribute="bottom" secondItem="ICF-vZ-Eyv" secondAttribute="bottom" id="mCX-Wn-pWI"/>
+                                    <constraint firstItem="ICF-vZ-Eyv" firstAttribute="top" secondItem="Pf5-pY-mQF" secondAttribute="top" id="mVk-Oa-Q8c"/>
+                                    <constraint firstItem="ICF-vZ-Eyv" firstAttribute="top" secondItem="Pf5-pY-mQF" secondAttribute="top" id="xhe-sK-SWc"/>
                                     <constraint firstItem="sec-OP-w9x" firstAttribute="top" secondItem="Pf5-pY-mQF" secondAttribute="top" id="zeS-AN-TJK"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -85,7 +99,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="displaySendCurrencyController" destination="BYZ-38-t0r" eventType="touchUpInside" id="6At-El-rFI"/>
                                     <segue destination="h7I-ge-Dwz" kind="presentation" id="eLX-kn-uUZ"/>
                                 </connections>
                             </button>
@@ -138,21 +151,21 @@
                             <constraint firstItem="pBT-eZ-trM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="CxD-Oe-WLw"/>
                             <constraint firstItem="Kxg-cA-zG0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Elr-hI-yty"/>
                             <constraint firstAttribute="trailing" secondItem="5I4-lN-M5N" secondAttribute="trailing" id="ILD-jo-Dhy"/>
-                            <constraint firstItem="oG9-Q2-wOa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Jzx-xO-pLX"/>
-                            <constraint firstItem="oG9-Q2-wOa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mzy-3c-I3T"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pf5-pY-mQF" secondAttribute="trailing" constant="15" id="Okq-xg-7sR"/>
                             <constraint firstItem="Pf5-pY-mQF" firstAttribute="top" secondItem="RGv-0V-rhp" secondAttribute="bottom" constant="25" id="RLT-xw-tzZ"/>
-                            <constraint firstItem="oG9-Q2-wOa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="SyJ-sa-E0B"/>
                             <constraint firstItem="Pf5-pY-mQF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="T8k-eW-7JS"/>
                             <constraint firstItem="kv6-AN-27D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Vmb-cc-gLi"/>
+                            <constraint firstItem="oG9-Q2-wOa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WIO-gO-2NJ"/>
                             <constraint firstItem="kv6-AN-27D" firstAttribute="top" secondItem="5I4-lN-M5N" secondAttribute="bottom" constant="25" id="i9T-Vb-wuK"/>
+                            <constraint firstItem="oG9-Q2-wOa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="k1b-Tt-ucj"/>
                             <constraint firstItem="RGv-0V-rhp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lV2-VI-TS5"/>
                             <constraint firstItem="RGv-0V-rhp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="laH-BU-pq1"/>
                             <constraint firstItem="5I4-lN-M5N" firstAttribute="top" secondItem="pBT-eZ-trM" secondAttribute="bottom" constant="15" id="mRK-ME-lcs"/>
+                            <constraint firstItem="oG9-Q2-wOa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oOd-XD-EbI"/>
                             <constraint firstItem="Kxg-cA-zG0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tJo-Bu-xPJ"/>
+                            <constraint firstItem="oG9-Q2-wOa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vif-XX-K3i"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kv6-AN-27D" secondAttribute="trailing" constant="15" id="yxQ-IR-r4m"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pBT-eZ-trM" secondAttribute="trailing" constant="15" id="z4Y-Ij-hyN"/>
-                            <constraint firstItem="oG9-Q2-wOa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zgK-GE-acA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -167,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="495" y="100"/>
+            <point key="canvasLocation" x="493.60000000000002" y="99.400299850074973"/>
         </scene>
         <!--Payment View Controller-->
         <scene sceneID="gA7-Jg-cak">
@@ -214,7 +227,7 @@
                                 </constraints>
                                 <state key="normal" image="qr-code"/>
                                 <connections>
-                                    <segue destination="vOZ-yM-s9N" kind="presentation" id="CCm-QB-Osb"/>
+                                    <action selector="scanCode" destination="h7I-ge-Dwz" eventType="touchUpInside" id="d4A-HJ-Z2B"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJ0-C1-3ZC">
@@ -233,7 +246,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="generateAddress" destination="BYZ-38-t0r" eventType="touchUpInside" id="VkK-vE-oNO"/>
+                                    <action selector="sendPayment" destination="h7I-ge-Dwz" eventType="touchUpInside" id="1Ui-Vb-ZYo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -255,6 +268,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dle-6I-P47"/>
                     </view>
+                    <connections>
+                        <outlet property="addressTextfield" destination="4E6-Wa-nuc" id="yHg-8P-Qro"/>
+                        <outlet property="paymentTextfield" destination="z0w-Jc-6a5" id="ZLF-f9-uca"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xat-VI-Szx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -263,7 +280,7 @@
         <!--Scan View Controller-->
         <scene sceneID="7FR-jc-Blf">
             <objects>
-                <viewController id="vOZ-yM-s9N" customClass="ScanViewController" customModule="Stellar_Wallet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScanViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vOZ-yM-s9N" customClass="ScanViewController" customModule="Stellar_Wallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0oo-du-Xm8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
