@@ -153,19 +153,13 @@ extension BalanceViewController {
             case .open:
                 break
             case .response( _, let paymentResponse):
-                var title = ""
-                var body = ""
-                
+
                 if paymentResponse.sourceAccount != accountId {
-                    title = "Payment Received"
-                    body = "You just received a payment of \(paymentResponse.amount) XLM from \(paymentResponse.sourceAccount)"
-                } else {
-                    title = "Payment Sent"
-                    body = "You just sent a payment of \(paymentResponse.amount) XLM."
-                }
-                
-                self.displayPushNotification(with: title, body: body)
-                
+                    let title = "Payment Received"
+                    let body = "You just received a payment of \(paymentResponse.amount) XLM from \(paymentResponse.sourceAccount)"
+                    
+                    self.displayPushNotification(with: title, body: body)
+                } 
                 self.getAccountDetails(accountId: accountId)
             case .error( _):
                 break

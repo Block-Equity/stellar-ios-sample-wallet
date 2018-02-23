@@ -118,7 +118,7 @@ extension PaymentViewController {
                                 case .success(_):
                                     print("Transaction successful.")
                                     DispatchQueue.main.async {
-                                        self.perform(#selector(self.dismissView), with: nil, afterDelay: 0.5)
+                                        self.perform(#selector(self.dismissView), with: nil, afterDelay: 1.0)
                                     }
                                 case .failure(_):
                                     break
