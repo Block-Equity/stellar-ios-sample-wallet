@@ -58,9 +58,9 @@ class BalanceViewController: UIViewController {
     }
     
     func checkForPrexistingWallet() {
-        if let publicKey =  UserDefaults.standard.string(forKey: "publicKey") {
+        if let accountId =  UserDefaults.standard.string(forKey: "accountId") {
             disableAddressButton()
-            getAccountDetails(accountId: publicKey)
+            getAccountDetails(accountId: accountId)
         }
     }
 
@@ -110,7 +110,15 @@ extension BalanceViewController {
             switch response {
             case .success(let data):
                 print("Details: \(data)")
-                UserDefaults.standard.set(keyPair.accountId, forKey: "publicKey")
+                let publicData = NSData(bytes: keyPair.publicKey.bytes, length: keyPair.publicKey.bytes.count)
+                
+                let privateBytes = keyPair.privateKey?.bytes ?? [UInt8]()
+                let privateData = NSData(bytes: privateBytes, length: privateBytes.count)
+
+                // Saving to user defaults is just for testing. This will be transferred to the keychain in an upcoming update.
+                UserDefaults.standard.set(keyPair.accountId, forKey: "accountId")
+                UserDefaults.standard.set(publicData, forKey: "publicKey")
+                UserDefaults.standard.set(privateData, forKey: "privateKey")
                 self.getAccountDetails(accountId: keyPair.accountId)
                 
             case .failure(let error):
@@ -145,9 +153,19 @@ extension BalanceViewController {
             case .open:
                 break
             case .response( _, let paymentResponse):
-                print(paymentResponse.amount)
-                let body = "You have just received a payment of \(paymentResponse.amount) XLM from \(paymentResponse.sourceAccount)"
-                self.displayPushNotification(with: "Payment Received", body: body)
+                var title = ""
+                var body = ""
+                
+                if paymentResponse.sourceAccount != accountId {
+                    title = "Payment Received"
+                    body = "You just received a payment of \(paymentResponse.amount) XLM from \(paymentResponse.sourceAccount)"
+                } else {
+                    title = "Payment Sent"
+                    body = "You just sent a payment of \(paymentResponse.amount) XLM."
+                }
+                
+                self.displayPushNotification(with: title, body: body)
+                
                 self.getAccountDetails(accountId: accountId)
             case .error( _):
                 break
@@ -167,11 +185,11 @@ extension BalanceViewController {
             content.body = body
             
             let trigger = UNTimeIntervalNotificationTrigger(
-                timeInterval: 1,
+                timeInterval: 0.5,
                 repeats: false)
             
             let request = UNNotificationRequest(
-                identifier: "payment.received",
+                identifier: "payment",
                 content: content,
                 trigger: trigger
             )
@@ -189,4 +207,5 @@ extension BalanceViewController : UNUserNotificationCenterDelegate {
         completionHandler([.alert, .badge, .sound])
     }
 }
+
 

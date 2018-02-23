@@ -249,6 +249,13 @@
                                     <action selector="sendPayment" destination="h7I-ge-Dwz" eventType="touchUpInside" id="1Ui-Vb-ZYo"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="cKl-V5-EnK">
+                                <rect key="frame" x="177" y="222" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Bx4-MY-Stv"/>
+                                    <constraint firstAttribute="width" constant="20" id="Crq-wU-NFP"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -256,7 +263,9 @@
                             <constraint firstItem="4E6-Wa-nuc" firstAttribute="leading" secondItem="dle-6I-P47" secondAttribute="leading" constant="15" id="BTy-xX-BdQ"/>
                             <constraint firstItem="AJ0-C1-3ZC" firstAttribute="leading" secondItem="dle-6I-P47" secondAttribute="leading" constant="15" id="C7K-wL-lUp"/>
                             <constraint firstItem="8Z6-3F-YlA" firstAttribute="leading" secondItem="dle-6I-P47" secondAttribute="leading" constant="15" id="CsC-K9-BkI"/>
+                            <constraint firstItem="cKl-V5-EnK" firstAttribute="top" secondItem="z0w-Jc-6a5" secondAttribute="bottom" constant="32" id="JLr-ba-w03"/>
                             <constraint firstItem="C9e-Ba-hFq" firstAttribute="leading" secondItem="4E6-Wa-nuc" secondAttribute="trailing" constant="5" id="OrB-ma-3Nx"/>
+                            <constraint firstItem="cKl-V5-EnK" firstAttribute="centerX" secondItem="3co-iv-3Uh" secondAttribute="centerX" id="PaM-dp-b5O"/>
                             <constraint firstItem="z0w-Jc-6a5" firstAttribute="top" secondItem="4E6-Wa-nuc" secondAttribute="bottom" constant="15" id="TB1-Hx-9eq"/>
                             <constraint firstItem="AJ0-C1-3ZC" firstAttribute="top" secondItem="z0w-Jc-6a5" secondAttribute="bottom" constant="20" id="VdP-yl-Tcj"/>
                             <constraint firstItem="4E6-Wa-nuc" firstAttribute="top" secondItem="8Z6-3F-YlA" secondAttribute="bottom" constant="30" id="afM-CT-kg7"/>
@@ -269,8 +278,10 @@
                         <viewLayoutGuide key="safeArea" id="dle-6I-P47"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="cKl-V5-EnK" id="6zQ-WC-k4Q"/>
                         <outlet property="addressTextfield" destination="4E6-Wa-nuc" id="yHg-8P-Qro"/>
                         <outlet property="paymentTextfield" destination="z0w-Jc-6a5" id="ZLF-f9-uca"/>
+                        <outlet property="sendPaymentButton" destination="AJ0-C1-3ZC" id="uur-ke-F6n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xat-VI-Szx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -286,11 +297,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSi-h0-Slt">
-                                <rect key="frame" x="15" y="35" width="30" height="30"/>
+                                <rect key="frame" x="15" y="20" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="6sm-UZ-IQi"/>
                                     <constraint firstAttribute="height" constant="30" id="DuY-Ys-aoe"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="icon-delete"/>
                                 <connections>
                                     <action selector="dismissView" destination="vOZ-yM-s9N" eventType="touchUpInside" id="tlW-Fi-dAz"/>
@@ -299,7 +311,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="rSi-h0-Slt" firstAttribute="top" secondItem="CMj-wz-G3l" secondAttribute="top" constant="15" id="Lsf-0d-dL5"/>
+                            <constraint firstItem="rSi-h0-Slt" firstAttribute="top" secondItem="CMj-wz-G3l" secondAttribute="top" id="Lsf-0d-dL5"/>
                             <constraint firstItem="rSi-h0-Slt" firstAttribute="leading" secondItem="CMj-wz-G3l" secondAttribute="leading" constant="15" id="cEI-Md-4aQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CMj-wz-G3l"/>
