@@ -142,7 +142,9 @@ extension BalanceViewController {
                 
             case .failure(let error):
                 print("Error: \(error)")
-                self.enableAddressButton()
+                DispatchQueue.main.async {
+                    self.enableAddressButton()
+                }
             }
         }
     }
