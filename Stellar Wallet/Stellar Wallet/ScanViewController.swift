@@ -20,6 +20,7 @@ class ScanViewController: UIViewController {
     var captureSession = AVCaptureSession()
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var qrCodeFrameView: UIView?
+    var closeButtonImage = UIImage(named: "icon-delete")?.withRenderingMode(.alwaysTemplate)
     
     weak var delegate: ScanViewControllerDelegate?
     
@@ -44,9 +45,25 @@ class ScanViewController: UIViewController {
         dismiss(animated: false, completion: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UIApplication.shared.isStatusBarHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupView()
+        setupCamera()
+    }
+    
+    func setupView() {
+        closeButton.setImage(closeButtonImage, for: .normal)
+        closeButton.tintColor = .white
+    }
+    
+    func setupCamera() {
         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: AVMediaType.video, position: .back)
         
         guard let captureDevice = deviceDiscoverySession.devices.first else {
@@ -75,12 +92,12 @@ class ScanViewController: UIViewController {
         captureSession.startRunning()
         
         view.bringSubview(toFront: closeButton)
-
+        
         qrCodeFrameView = UIView()
         
         if let qrCodeFrameView = qrCodeFrameView {
-            qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
-            qrCodeFrameView.layer.borderWidth = 2
+            qrCodeFrameView.layer.borderColor = UIColor(red: 81.0/255.0, green: 178.0/255.0, blue: 224.0/255.0, alpha: 1.0).cgColor
+            qrCodeFrameView.layer.borderWidth = 3
             view.addSubview(qrCodeFrameView)
             view.bringSubview(toFront: qrCodeFrameView)
         }
