@@ -15,6 +15,9 @@
 		EC211ECF203CA434002CDAB8 /* Stellar_WalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC211ECE203CA434002CDAB8 /* Stellar_WalletTests.swift */; };
 		EC211EDA203CA434002CDAB8 /* Stellar_WalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC211ED9203CA434002CDAB8 /* Stellar_WalletUITests.swift */; };
 		EC3BC0B4203E0E03007134FA /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3BC0B3203E0E03007134FA /* ScanViewController.swift */; };
+		EC65DAFE204DA31100509168 /* MnemonicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65DAFD204DA31100509168 /* MnemonicViewController.swift */; };
+		EC65DB06204DA33B00509168 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65DB05204DA33B00509168 /* ConfirmViewController.swift */; };
+		EC65DB09204DA35C00509168 /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65DB08204DA35C00509168 /* PinViewController.swift */; };
 		ECC17077203CA5BF001B8109 /* stellarsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC17068203CA5A0001B8109 /* stellarsdk.framework */; };
 		ECC17078203CA5BF001B8109 /* stellarsdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ECC17068203CA5A0001B8109 /* stellarsdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ECC17086203D0B56001B8109 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC17085203D0B56001B8109 /* PaymentViewController.swift */; };
@@ -129,6 +132,9 @@
 		EC211ED9203CA434002CDAB8 /* Stellar_WalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stellar_WalletUITests.swift; sourceTree = "<group>"; };
 		EC211EDB203CA434002CDAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC3BC0B3203E0E03007134FA /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		EC65DAFD204DA31100509168 /* MnemonicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicViewController.swift; sourceTree = "<group>"; };
+		EC65DB05204DA33B00509168 /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
+		EC65DB08204DA35C00509168 /* PinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinViewController.swift; sourceTree = "<group>"; };
 		ECC1705D203CA5A0001B8109 /* stellarsdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = stellarsdk.xcodeproj; path = "../../stellar-ios-mac-sdk/stellarsdk/stellarsdk.xcodeproj"; sourceTree = "<group>"; };
 		ECC17085203D0B56001B8109 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				EC211EB9203CA434002CDAB8 /* AppDelegate.swift */,
+				EC65DB07204DA34000509168 /* Account */,
 				EC211EBB203CA434002CDAB8 /* BalanceViewController.swift */,
 				ECC17085203D0B56001B8109 /* PaymentViewController.swift */,
 				EC3BC0B3203E0E03007134FA /* ScanViewController.swift */,
@@ -211,6 +218,16 @@
 				EC211EDB203CA434002CDAB8 /* Info.plist */,
 			);
 			path = "Stellar WalletUITests";
+			sourceTree = "<group>";
+		};
+		EC65DB07204DA34000509168 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				EC65DAFD204DA31100509168 /* MnemonicViewController.swift */,
+				EC65DB05204DA33B00509168 /* ConfirmViewController.swift */,
+				EC65DB08204DA35C00509168 /* PinViewController.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		ECC1705E203CA5A0001B8109 /* Products */ = {
@@ -422,8 +439,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC65DAFE204DA31100509168 /* MnemonicViewController.swift in Sources */,
 				EC211EBC203CA434002CDAB8 /* BalanceViewController.swift in Sources */,
+				EC65DB09204DA35C00509168 /* PinViewController.swift in Sources */,
 				ECC17086203D0B56001B8109 /* PaymentViewController.swift in Sources */,
+				EC65DB06204DA33B00509168 /* ConfirmViewController.swift in Sources */,
 				EC211EBA203CA434002CDAB8 /* AppDelegate.swift in Sources */,
 				EC3BC0B4203E0E03007134FA /* ScanViewController.swift in Sources */,
 			);

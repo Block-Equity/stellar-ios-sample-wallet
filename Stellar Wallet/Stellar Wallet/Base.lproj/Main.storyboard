@@ -10,6 +10,86 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Mnemonic View Controller-->
+        <scene sceneID="doG-GB-LfA">
+            <objects>
+                <viewController id="95Q-HJ-DrM" customClass="MnemonicViewController" customModule="Stellar_Wallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TLf-06-aDY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFk-WK-0ds">
+                                <rect key="frame" x="15" y="603" width="345" height="44"/>
+                                <color key="backgroundColor" red="0.31957346199999997" green="0.69989806409999999" blue="0.87845176459999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="f5V-ZP-Vwv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendPayment" destination="h7I-ge-Dwz" eventType="touchUpInside" id="o7t-1p-4Sq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please write down and safely store these 24 words, in their respective order." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aD-p7-kkR">
+                                <rect key="frame" x="15" y="79" width="345" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fv5-s6-fZ0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1sj-Rr-bej">
+                                <rect key="frame" x="187.5" y="139" width="187.5" height="444"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Le-J1-nZj">
+                                <rect key="frame" x="0.0" y="139" width="187.5" height="444"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hYW-IH-hX8" firstAttribute="bottom" secondItem="fFk-WK-0ds" secondAttribute="bottom" constant="20" id="1lC-QR-p4v"/>
+                            <constraint firstItem="1sj-Rr-bej" firstAttribute="width" secondItem="8Le-J1-nZj" secondAttribute="width" id="6s0-TC-tFD"/>
+                            <constraint firstItem="1sj-Rr-bej" firstAttribute="top" secondItem="3aD-p7-kkR" secondAttribute="bottom" constant="20" id="9UP-Of-rCO"/>
+                            <constraint firstItem="8Le-J1-nZj" firstAttribute="top" secondItem="3aD-p7-kkR" secondAttribute="bottom" constant="20" id="EkS-if-cr3"/>
+                            <constraint firstItem="3aD-p7-kkR" firstAttribute="top" secondItem="hYW-IH-hX8" secondAttribute="top" constant="15" id="KYW-iP-sAU"/>
+                            <constraint firstItem="8Le-J1-nZj" firstAttribute="leading" secondItem="hYW-IH-hX8" secondAttribute="leading" id="MsP-yx-haf"/>
+                            <constraint firstItem="3aD-p7-kkR" firstAttribute="leading" secondItem="hYW-IH-hX8" secondAttribute="leading" constant="15" id="O7k-J2-zwP"/>
+                            <constraint firstItem="hYW-IH-hX8" firstAttribute="trailing" secondItem="fFk-WK-0ds" secondAttribute="trailing" constant="15" id="Pb6-Jm-Sbc"/>
+                            <constraint firstItem="fFk-WK-0ds" firstAttribute="top" secondItem="8Le-J1-nZj" secondAttribute="bottom" constant="20" id="bCl-pI-iSP"/>
+                            <constraint firstItem="1sj-Rr-bej" firstAttribute="leading" secondItem="8Le-J1-nZj" secondAttribute="trailing" id="dmE-L0-rf3"/>
+                            <constraint firstItem="hYW-IH-hX8" firstAttribute="trailing" secondItem="3aD-p7-kkR" secondAttribute="trailing" constant="15" id="kMr-VA-Wp6"/>
+                            <constraint firstItem="fFk-WK-0ds" firstAttribute="top" secondItem="1sj-Rr-bej" secondAttribute="bottom" constant="20" id="mqe-0r-zx0"/>
+                            <constraint firstItem="1sj-Rr-bej" firstAttribute="trailing" secondItem="hYW-IH-hX8" secondAttribute="trailing" id="sNc-2x-v2e"/>
+                            <constraint firstItem="fFk-WK-0ds" firstAttribute="leading" secondItem="hYW-IH-hX8" secondAttribute="leading" constant="15" id="vV0-V6-s74"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hYW-IH-hX8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LU6-6P-cT7">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mRp-hT-uPY">
+                            <connections>
+                                <action selector="dismissView" destination="95Q-HJ-DrM" id="FRL-Pv-fRv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="leftViewHolder" destination="8Le-J1-nZj" id="RCJ-tC-rnY"/>
+                        <outlet property="rightViewHolder" destination="1sj-Rr-bej" id="a0X-f9-xXC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SoZ-oh-BLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1413.5999999999999" y="-593.25337331334333"/>
+        </scene>
         <!--Balance View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -121,7 +201,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="generateAddress" destination="BYZ-38-t0r" eventType="touchUpInside" id="1xl-ce-U31"/>
+                                            <segue destination="gWR-s8-pVm" kind="presentation" id="amw-0Z-kcw"/>
                                         </connections>
                                     </button>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="A3n-2G-PTM">
@@ -323,6 +403,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ghu-Iy-2Ou" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2000" y="100"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4zB-3M-gbR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gWR-s8-pVm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hrA-P5-nAw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="95Q-HJ-DrM" kind="relationship" relationship="rootViewController" id="1M0-hN-dJb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bcl-jo-Dc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="492.80000000000001" y="-592.80359820089961"/>
         </scene>
     </scenes>
     <resources>

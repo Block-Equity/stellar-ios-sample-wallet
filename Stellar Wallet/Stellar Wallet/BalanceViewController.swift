@@ -43,8 +43,41 @@ class BalanceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        checkForPrexistingWallet()
-        checkForPushPermissions()
+        //checkForPrexistingWallet()
+        //checkForPushPermissions()
+        
+        verifyMnemonic(mnemonic: "bench hurt jump file august wise shallow faculty impulse spring exact slush thunder author capable act festival slice deposit sauce coconut afford frown better")
+    }
+    
+    func verifyMnemonic(mnemonic: String) {
+        
+        let bip39Seed = Mnemonic.createSeed(mnemonic: mnemonic)
+        print("Bip 39 seed", bip39Seed.toHexString())
+
+        let masterPrivateKey = HDPrivateKey(seed: bip39Seed)
+
+        let purpose = masterPrivateKey.derived(at: 44, hardens: true)
+
+        // m/44'/148'
+        let coinType = purpose.derived(at: 148, hardens: true)
+        print("m/44'/148' CoinType", coinType.raw.toHexString())
+        
+        // m/44'/148'/0'
+        let account = coinType.derived(at: 0, hardens: true)
+
+        let keyPair = try! KeyPair.init(seed: Seed(bytes: account.raw.bytes))
+        
+        print("m/44'/148/0' accountid", keyPair.accountId)
+        print("m/44'/148/0' secret", keyPair.secretSeed)
+        
+        // m/44'/148'/1'
+        let account2 = coinType.derived(at: 1, hardens: true)
+        
+        let keyPair2 = try! KeyPair.init(seed: Seed(bytes: account2.raw.bytes))
+        
+        print("m/44'/148/1' accountid", keyPair2.accountId)
+        print("m/44'/148/1' secret", keyPair2.secretSeed)
+
     }
     
     func checkForPushPermissions() {
@@ -202,6 +235,21 @@ extension BalanceViewController : UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.alert, .badge, .sound])
     }
+}
+
+func dataWithHexString(hex: String) -> Data {
+    var hex = hex
+    var data = Data()
+    while(hex.count > 0) {
+        let subIndex = hex.index(hex.startIndex, offsetBy: 2)
+        let c = String(hex[..<subIndex])
+        hex = String(hex[subIndex...])
+        var ch: UInt32 = 0
+        Scanner(string: c).scanHexInt32(&ch)
+        var char = UInt8(ch)
+        data.append(&char, count: 1)
+    }
+    return data
 }
 
 
